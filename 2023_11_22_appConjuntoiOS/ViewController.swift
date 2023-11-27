@@ -7,7 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    var operaciones : [String] = ["Unión (A U B)", "Intersección (A ∩ B)", "Diferencia 1 (A - B)", "Diferencia 2 (B - A)", "Diferencia Simétrica (A △ B)"]
     
     var setA = Set <String> ()
     var setB = Set <String> ()
@@ -18,12 +20,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var button_conjuntoA: UIButton!
     @IBOutlet weak var button_conjuntoB: UIButton!
     
-    
-    @IBOutlet weak var button_Union: UIButton!
-    @IBOutlet weak var button_Interseccion: UIButton!
-    @IBOutlet var button_acciones: [UIButton]!
+//    @IBOutlet weak var button_Union: UIButton!
+//    @IBOutlet weak var button_Interseccion: UIButton!
+//    @IBOutlet var button_acciones: [UIButton]!
     
     @IBOutlet weak var area_resultado: UITextView!
+    
+    @IBOutlet weak var pickerView_pickerOperaciones: UIPickerView!
+    
+    @IBOutlet weak var imageView_diagramas: UIImageView!
     
     @IBAction func text_conjuntoA(_ sender: UITextField) {
         
@@ -37,13 +42,22 @@ class ViewController: UIViewController {
     @IBAction func button_conjuntoA(_ sender: UIButton) {
         
         if !text_conjuntoA.text!.isEmpty {
+            
+            setA.removeAll()
+            
             let cadena : [String] = (text_conjuntoA.text!.components(separatedBy: ","))
             
             for valor in cadena {
-                setA.insert(valor)
+                if valor != " " {
+                    setA.insert(valor)
+                }
             }
             
             setA.remove("")
+            
+            if pickerView_pickerOperaciones.isUserInteractionEnabled {
+                self.pickerView(pickerView_pickerOperaciones, didSelectRow: pickerView_pickerOperaciones.selectedRow(inComponent: 0), inComponent: 0)
+            }
             
             text_conjuntoB.isEnabled = true
             text_conjuntoB.becomeFirstResponder()
@@ -61,37 +75,96 @@ class ViewController: UIViewController {
     
     @IBAction func button_conjuntoB(_ sender: UIButton) {
         
-        let cadena : [String] = text_conjuntoB.text!.components(separatedBy: ",")
-        
-        for valor in cadena {
-            setB.insert(valor)
+        if !text_conjuntoB.text!.isEmpty {
+            
+            setB.removeAll()
+            
+            let cadena : [String] = text_conjuntoB.text!.components(separatedBy: ",")
+                    
+            for valor in cadena {
+                if valor != " " {
+                    setB.insert(valor)
+                }
+            }
+            
+            setB.remove("")
+            
+            if pickerView_pickerOperaciones.isUserInteractionEnabled {
+                self.pickerView(pickerView_pickerOperaciones, didSelectRow: pickerView_pickerOperaciones.selectedRow(inComponent: 0), inComponent: 0)
+            } else {
+                area_resultado.isScrollEnabled = true;
+                pickerView_pickerOperaciones.isUserInteractionEnabled = true
+                self.pickerView(pickerView_pickerOperaciones, didSelectRow: 0, inComponent: 0)
+            }
         }
         
-        setB.remove("")
-        area_resultado.isScrollEnabled = true;
         
-        for button in button_acciones {
-            button.isEnabled = true
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1;
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return operaciones.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return operaciones[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        switch row {
+            
+        // unión
+        case 0:
+            let union = setA.union(setB).sorted()
+            area_resultado.text = "A U B = \(union)"
+            imageView_diagramas.image = UIImage(named: "A_union_B")
+            break
+            
+        // intersección
+        case 1:
+            let interseccion = setA.intersection(setB).sorted()
+            area_resultado.text = "A ∩ B = \(interseccion)"
+            imageView_diagramas.image = UIImage(named: "A_interseccion_B")
+            break
+            
+        // a menos b
+        case 2:
+            let resta = setA.subtracting(setB)
+            area_resultado.text = "A - B = \(resta)"
+            imageView_diagramas.image = UIImage(named: "A_menos_B")
+            break
+            
+        // b menos a
+        case 3:
+            let resta = setB.subtracting(setA)
+            area_resultado.text = "B - A = \(resta)"
+            imageView_diagramas.image = UIImage(named: "B_menos_A")
+            break
+            
+        // diferencia simétrica
+        case 4:
+            let diferenciaSim = setA.symmetricDifference(setB)
+            area_resultado.text = "A △ B = \(diferenciaSim)"
+            imageView_diagramas.image = UIImage(named: "A_diferenciaSimetrica_B")
+            break
+        
+        default:
+            break
+            
         }
     }
-    
-    
-    @IBAction func button_union(_ sender: UIButton) {
-        
-        let unionAB = setA.union(setB)
-        
-        for valor in unionAB {
-            area_resultado.text += area_resultado.text + "\n - \(valor)"
-        }
-    }
-    
-    @IBAction func button_interseccion(_ sender: UIButton) {
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        imageView_diagramas.backgroundColor = .white
+        pickerView_pickerOperaciones.delegate = self
+        pickerView_pickerOperaciones.dataSource = self
     }
 
 

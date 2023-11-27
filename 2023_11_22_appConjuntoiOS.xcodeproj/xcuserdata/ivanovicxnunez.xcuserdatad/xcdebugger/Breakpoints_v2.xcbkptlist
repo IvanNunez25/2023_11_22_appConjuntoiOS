@@ -14,8 +14,8 @@
             filePath = "2023_11_22_appConjuntoiOS/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "button_conjuntoA(_:)"
             landmarkType = "7">
             <Locations>
@@ -48,6 +48,149 @@
                   startingLineNumber = "38"
                   endingLineNumber = "38"
                   offsetFromSymbolStart = "1108">
+               </Location>
+               <Location
+                  uuid = "BD9EEE85-9040-45B5-BA4F-706D8DE45B4C - 8c4fb0b34d3caf5a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_023_11_22_appConjuntoiOS.ViewController.button_conjuntoA(__C.UIButton) -&gt; ()"
+                  moduleName = "2023_11_22_appConjuntoiOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ivanovicxnunez/Documents/iOS/2023_11_22_appConjuntoiOS/2023_11_22_appConjuntoiOS/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "1108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A8F3C7F9-060A-4B95-B9A7-EE4F54F5FF24"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "2023_11_22_appConjuntoiOS/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "pickerView(_:didSelectRow:inComponent:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A8F3C7F9-060A-4B95-B9A7-EE4F54F5FF24 - 9a6bd158a11725cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_023_11_22_appConjuntoiOS.ViewController.pickerView(_: __C.UIPickerView, didSelectRow: Swift.Int, inComponent: Swift.Int) -&gt; ()"
+                  moduleName = "2023_11_22_appConjuntoiOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ivanovicxnunez/Documents/iOS/2023_11_22_appConjuntoiOS/2023_11_22_appConjuntoiOS/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  uuid = "A8F3C7F9-060A-4B95-B9A7-EE4F54F5FF24 - 9a6bd158a117222e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_023_11_22_appConjuntoiOS.ViewController.pickerView(_: __C.UIPickerView, didSelectRow: Swift.Int, inComponent: Swift.Int) -&gt; ()"
+                  moduleName = "2023_11_22_appConjuntoiOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ivanovicxnunez/Documents/iOS/2023_11_22_appConjuntoiOS/2023_11_22_appConjuntoiOS/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "132">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ED181569-88FB-4A83-A1F6-741A437AF405"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "2023_11_22_appConjuntoiOS/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "button_conjuntoB(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E59BCA07-FE89-4DB5-8449-618E61DC390C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "2023_11_22_appConjuntoiOS/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "button_conjuntoA(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "80D7A998-8921-4769-97F7-1A8E769C3E60"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "2023_11_22_appConjuntoiOS/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "pickerView(_:didSelectRow:inComponent:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "80D7A998-8921-4769-97F7-1A8E769C3E60 - 9a6bd158a11722d5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_023_11_22_appConjuntoiOS.ViewController.pickerView(_: __C.UIPickerView, didSelectRow: Swift.Int, inComponent: Swift.Int) -&gt; ()"
+                  moduleName = "2023_11_22_appConjuntoiOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ivanovicxnunez/Documents/iOS/2023_11_22_appConjuntoiOS/2023_11_22_appConjuntoiOS/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "80D7A998-8921-4769-97F7-1A8E769C3E60 - 9a6bd158a117201f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_023_11_22_appConjuntoiOS.ViewController.pickerView(_: __C.UIPickerView, didSelectRow: Swift.Int, inComponent: Swift.Int) -&gt; ()"
+                  moduleName = "2023_11_22_appConjuntoiOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ivanovicxnunez/Documents/iOS/2023_11_22_appConjuntoiOS/2023_11_22_appConjuntoiOS/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "152">
                </Location>
             </Locations>
          </BreakpointContent>
